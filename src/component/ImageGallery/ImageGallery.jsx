@@ -2,10 +2,10 @@ import React from "react";
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem.jsx';
 import styles from "./ImageGallery.module.css";
 
-const ImageGallery = ({ articles, handleImageClick }) => {
+const ImageGallery = ({ images, handleImageClick }) => {
   return (
   <ul className={styles.ImageGallery}>
-    {articles.map(({ id, webformatURL, tags, largeImageURL }) => (
+    {images.map(({ id, webformatURL, tags, largeImageURL }) => (
       <ImageGalleryItem
         key={id}
         webformatURL={webformatURL}
