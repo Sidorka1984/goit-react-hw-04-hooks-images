@@ -5,9 +5,8 @@ import styles from './Modal.module.css';
 export default function Modal({ onClose, children }) {
   useEffect(() => {
     window.addEventListener('keydown', closeModalEsc)
-    return () => {
-      window.removeEventListener('keydown', closeModalEsc)
-    }
+    return () => window.removeEventListener('keydown', closeModalEsc)
+    
   })
 
   const closeModalEsc = (e) => {
