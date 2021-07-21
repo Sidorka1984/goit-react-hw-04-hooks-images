@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { fetchArticles } from "./services/api";
-import Button from "./component/Button/Button.jsx";
-import Container from "./component/Container/Container.jsx";
-import ImageGallery from "./component/ImageGallery/ImageGallery.jsx";
-import Modal from "./component/Modal/Modal.jsx";
-import ImageLoader from "./component/Loader/Loader.jsx";
-import Searchbar from "./component/Searchbar/Searchbar.jsx";
-import { onErrorToast } from "./component/Error";
+import Button from "./components/Button/Button.jsx";
+import Container from "./components/Container/Container.jsx";
+import ImageGallery from "./components/ImageGallery/ImageGallery.jsx";
+import Modal from "./components/Modal/Modal.jsx";
+import ImageLoader from "./components/Loader/Loader.jsx";
+import Searchbar from "./components/Searchbar/Searchbar.jsx";
+import { onErrorToast } from "./components/Error";
 
 const Status = {
   IDLE: "idle",
