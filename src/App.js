@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { fetchArticles } from "./services/api";
 import Button from "./component/Button/Button.jsx";
 import Container from "./component/Container/Container.jsx";
@@ -66,7 +66,7 @@ export default function App() {
       try {
         const images = await fetchArticles(imageName, page);
         if (images.length === 0) {
-          throw new Error();
+          toast.error(`No results were found for "${imageName}"`);
         }
 
         setImages((state) => [...state, ...images]);
