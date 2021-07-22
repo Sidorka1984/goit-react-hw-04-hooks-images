@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import styles from './Modal.module.css';
 
 
-const ModalRoot = document.querySelector('#root')
+const modalRoot = document.querySelector('#modal-root')
 
 export default function Modal({ onClose, children }) {
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Modal({ onClose, children }) {
     <div className={styles.Overlay} onClick={handleBackdropClick}>
       <div className={styles.Modal}>{children}</div>
     </div>,
-    ModalRoot,
+    modalRoot,
   )
 }
 
